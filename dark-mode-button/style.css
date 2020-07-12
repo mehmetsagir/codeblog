@@ -1,0 +1,63 @@
+body{
+    width: 1005;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#switch {
+    visibility: hidden;
+    position: absolute;
+}
+
+.switch-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5rem;
+    position: relative;
+    cursor: pointer;
+    transition: 1s all ease;
+}
+
+.switch-label .toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    background-color: #eb008c;
+    position: absolute;
+    left: 0.3rem;
+    transition: 1s all ease;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 2vh;
+}
+
+#switch:checked ~ .switch-label {
+    background: #eb008c;
+    border: none;
+    transition: 1s all ease;
+}
+
+#switch:checked ~ .switch-label .toggle {
+    height: 1.5rem;
+    border-radius: 2.5rem 2.5rem 0 0;
+    background: transparent;
+    box-shadow: 0 -12px 0 0 #fff;
+    transform: scale(0.9) translateX(6rem) rotate(90deg);
+    transition: 1s all ease;
+}
+
+.dark {
+    background: #000;
+    transition: 1s all ease;
+    color:#fff;
+}
